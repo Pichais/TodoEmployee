@@ -15,6 +15,7 @@ class AllEmployeeViewModel extends GetxController with StateMixin<String> {
 
   fetchAllEmployee() async {
     try {
+      print('is load');
       change("load", status: RxStatus.loading());
       var response = await http
           .get(Uri.https("fake-json-api.mock.beeceptor.com", "/users"));
